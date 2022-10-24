@@ -18,6 +18,9 @@ set(PROJECT_SOURCES
         main.cpp
         photonmainwindow.cpp
         photonmainwindow.h
+        photon_rendering.h
+        photonrenderer.h
+        photonrenderer.cpp
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -43,6 +46,8 @@ else()
     endif()
 endif()
 
+target_include_directories(PhotonDemo PUBLIC ${CMAKE_SOURCE_DIR}/)
+target_include_directories(PhotonDemo PUBLIC /usr/local/include/)
 target_link_libraries(PhotonDemo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt6::OpenGLWidgets)
 
 set_target_properties(PhotonDemo PROPERTIES

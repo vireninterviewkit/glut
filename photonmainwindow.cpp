@@ -1,3 +1,13 @@
+#include <iostream>
+
+#include <QListWidget>
+#include <QLabel>
+#include <QPushButton>
+#include <QVBoxLayout>
+#include <QGridLayout>
+#include <QCheckBox>
+#include <QFileDialog>
+
 #include "photonmainwindow.h"
 
 PhotonMainWindow::~PhotonMainWindow()
@@ -13,11 +23,9 @@ PhotonMainWindow::PhotonMainWindow(QWidget *parent) : QWidget(parent),
     selected_imdf_name_ = tr("");
 
     QVBoxLayout* boxLayout = new QVBoxLayout();
-
-    QLabel *glWidget = new QLabel("TODO: GL Widget");
-    boxLayout->addWidget(glWidget);
-
+    renderer_ = new PhotonRenderer();
     QGridLayout *grid = setupUI();
+    boxLayout->addWidget(renderer_);
     boxLayout->addLayout(grid);
 
     setLayout(boxLayout);

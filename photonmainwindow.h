@@ -1,24 +1,13 @@
 #ifndef PHOTONMAINWINDOW_H
 #define PHOTONMAINWINDOW_H
 
-#include <QMainWindow>
-#include <iostream>
-#include <QApplication>
-#include <QGridLayout>
 #include <QWidget>
-#include <QPushButton>
 #include <QDir>
-#include <QListWidget>
-#include <QOpenGLWidget>
-#include <QVBoxLayout>
-#include <QLabel>
-#include <QGridLayout>
-#include <QCheckBox>
-#include <QFileDialog>
+#include "photonrenderer.h"
 
-class PhotonRenderer: public QOpenGLWidget {
-
-};
+class QListWidget;
+class QLabel;
+class QGridLayout;
 
 class PhotonMainWindow : public QWidget
 {
