@@ -17,7 +17,7 @@ void display() {
   
   // test+
   // glBegin(GL_POLYGON);
-  // try points
+  // try points of point size 16.
   glPointSize(16);
   glBegin(GL_POINTS);
   // test-
@@ -42,15 +42,9 @@ int main(int argc, char** argv) {
   // Position window at (80,80)-(480,380) and give it a title.
   glutInitWindowPosition(80, 80);
   glutInitWindowSize(400, 300);
-  glutCreateWindow("A Simple Triangle");
+  glutCreateWindow("Photon Renderer");
   
-  // Tell GLUT that whenever the main window needs to be repainted that it
-  // should call the function display().
   glutDisplayFunc(display);
-  
-  // Tell GLUT to start reading and processing events.  This function
-  // never returns; the program only exits when the user closes the main
-  // window or kills the process.
   glutMainLoop();
   return 0;
 }
