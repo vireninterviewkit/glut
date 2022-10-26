@@ -14,7 +14,13 @@ void display() {
   // Drawing is done by specifying a sequence of vertices.  The way these
   // vertices are connected (or not connected) depends on the argument to
   // glBegin.  GL_POLYGON constructs a filled polygon.
-  glBegin(GL_POLYGON);
+  
+  // test+
+  // glBegin(GL_POLYGON);
+  // try points
+  glPointSize(16);
+  glBegin(GL_POINTS);
+  // test-
   glColor3f(1, 0, 0); glVertex3f(-0.6, -0.75, 0.5);
   glColor3f(0, 1, 0); glVertex3f(0.6, -0.75, 0);
   glColor3f(0, 0, 1); glVertex3f(0, 0.75, 0);
