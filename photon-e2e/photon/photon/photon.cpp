@@ -19,7 +19,7 @@ photon::~photon() {
   delete window_;
 }
 
-void photon::construct(int argc, const char * argv[]) {
+void photon::construct(int argc,  char * argv[]) {
   std::cout << __PRETTY_FUNCTION__ << std::endl;
   window_->construct(argc, argv);
 }

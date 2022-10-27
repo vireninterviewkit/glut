@@ -11,7 +11,7 @@
 class win {
 public:
   virtual ~win() = 0;
-  virtual void construct(int argc, const char * argv[]) = 0;
+  virtual void construct(int argc,  char * argv[]) = 0;
   virtual void show_scene(unsigned int flags) = 0;
 };
 

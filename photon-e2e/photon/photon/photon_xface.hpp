@@ -11,7 +11,7 @@
 #include <vector>
 #include "cmn.hpp"
 
-void construct(int argc, const char * argv[]);
+void construct(int argc,  char * argv[]);
 void destruct();
 int configure_space(const std::vector<line_segment> segments);
 void compute_path();

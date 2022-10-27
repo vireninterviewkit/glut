@@ -21,7 +21,7 @@ class photon {
 public:
   photon();
   ~photon();
-  void construct(int argc, const char * argv[]);
+  void construct(int argc,  char * argv[]);
   void reset();
   int configure_space(const std::vector<line_segment> segments);
   std::vector<point2d> compute_path(const point2d &from, const point2d &to);
