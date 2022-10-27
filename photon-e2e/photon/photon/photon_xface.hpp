@@ -12,7 +12,7 @@
 #include "cmn.hpp"
 
 void construct(int argc,  char * argv[]);
-void destruct();
+void destroy();
 int configure_space(const std::vector<line_segment> segments);
 void compute_path();
 int show_scene();

@@ -16,7 +16,7 @@ void construct(int argc,  char * argv[]) {
   g_photon_.construct(argc, argv);
 }
 
-void destruct() {
+void destroy() {
   TRACE
   g_photon_.reset();
 }

@@ -16,6 +16,7 @@
 		B60944A7290A341D00CF101F /* cmn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B60944A5290A341D00CF101F /* cmn.cpp */; };
 		B60944AB290A3D0500CF101F /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60944A9290A3D0500CF101F /* GLUT.framework */; };
 		B60944AC290A3D0500CF101F /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B60944AA290A3D0500CF101F /* OpenGL.framework */; };
+		B6FD2E83290A54D50015B4CA /* driver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6FD2E81290A54D50015B4CA /* driver.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,8 @@
 		B60944A6290A341D00CF101F /* cmn.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = cmn.hpp; sourceTree = "<group>"; };
 		B60944A9290A3D0500CF101F /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		B60944AA290A3D0500CF101F /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		B6FD2E81290A54D50015B4CA /* driver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = driver.cpp; sourceTree = "<group>"; };
+		B6FD2E82290A54D50015B4CA /* driver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = driver.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				B60944A3290A2AFE00CF101F /* photon_xface.hpp */,
 				B60944A5290A341D00CF101F /* cmn.cpp */,
 				B60944A6290A341D00CF101F /* cmn.hpp */,
+				B6FD2E81290A54D50015B4CA /* driver.cpp */,
+				B6FD2E82290A54D50015B4CA /* driver.hpp */,
 			);
 			path = photon;
 			sourceTree = "<group>";
@@ -172,6 +177,7 @@
 				B6094490290A293B00CF101F /* main.cpp in Sources */,
 				B6094498290A29BE00CF101F /* photon.cpp in Sources */,
 				B60944A7290A341D00CF101F /* cmn.cpp in Sources */,
+				B6FD2E83290A54D50015B4CA /* driver.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
