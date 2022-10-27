@@ -11,35 +11,16 @@
 #include <GL/glut.h>
 #endif
 #include <iostream>
+#include <assert.h>
 #include "darwin.hpp"
 
-//void display() {
-//  glClear(GL_COLOR_BUFFER_BIT);
-//  glPointSize(16);
-//  glBegin(GL_POINTS);
-//  glColor3f(1, 0, 0);
-//  glVertex3f(-0.6, -0.75, 0.5);
-//  glColor3f(0, 1, 0);
-//  glVertex3f(0.6, -0.75, 0);
-//  glColor3f(0, 0, 1);
-//  glVertex3f(0, 0.75, 0);
-//  glEnd();
-//  glFlush();
-//}
+static darwin *g_darwin_ = 0;
 
-//int setup_glut(int argc, char** argv) {
-//  glutInit(&argc, argv);
-//  glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
-//
-//  // Position window at (80,80)-(480,380) and give it a title.
-//  glutInitWindowPosition(80, 80);
-//  glutInitWindowSize(400, 300);
-//  glutCreateWindow("Photon Darwin Window");
-//
-//  glutDisplayFunc(display);
-//  glutMainLoop();
-//  return 0;
-//}
+static void update_ui(void) {
+  std::cout << __PRETTY_FUNCTION__ << std::endl;
+  assert(g_darwin_);
+  g_darwin_->show_scene(0);
+}
 
 darwin::~darwin() {
   std::cout << __PRETTY_FUNCTION__ << std::endl;
@@ -54,14 +35,11 @@ void darwin::construct(int argc,  char * argv[]) {
   glutInitWindowPosition(80, 80);
   glutInitWindowSize(400, 300);
   glutCreateWindow("Photon Darwin Window");
-  
-  glutDisplayFunc(&darwin::update_ui);
+  g_darwin_ = this;
+  glutDisplayFunc(update_ui);
   glutMainLoop();
 }
 
-void darwin::update_ui() {
-  std::cout << __PRETTY_FUNCTION__ << std::endl;
-}
 
 void darwin::show_scene(unsigned int flags) {
   std::cout << __PRETTY_FUNCTION__ << std::endl;

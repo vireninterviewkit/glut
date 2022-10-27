@@ -15,8 +15,6 @@ public:
   virtual ~darwin();
   virtual void construct(int argc,  char * argv[]);
   virtual void show_scene(unsigned int flags);
-private:
-  static void update_ui();
 };
 
 #endif /* darwin_hpp */
