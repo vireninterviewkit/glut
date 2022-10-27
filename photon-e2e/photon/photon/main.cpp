@@ -10,7 +10,6 @@
 #else
 #include <GL/glut.h>
 #endif
-#include <iostream>
 #include "photon_xface.hpp"
 
 int main(int argc, char * argv[]) {

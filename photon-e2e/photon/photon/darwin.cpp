@@ -13,7 +13,7 @@
 #include <GL/gl.h>
 #include <GL/glut.h>
 #endif
-#include <iostream>
+#include "cmn.hpp"
 #include <assert.h>
 
 #include "darwin.hpp"
@@ -21,17 +21,17 @@
 static darwin *g_darwin_ = 0;
 
 static void update_ui(void) {
-  std::cout << __PRETTY_FUNCTION__ << std::endl;
+  TRACE
   assert(g_darwin_);
   g_darwin_->show_scene(0);
 }
 
 darwin::~darwin() {
-  std::cout << __PRETTY_FUNCTION__ << std::endl;
+  TRACE
 }
 
 void darwin::construct(int argc,  char * argv[]) {
-  std::cout << __PRETTY_FUNCTION__ << std::endl;
+  TRACE
   glutInit(&argc, argv);
   glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
   
@@ -45,7 +45,7 @@ void darwin::construct(int argc,  char * argv[]) {
 }
 
 void darwin::show_scene(unsigned int flags) {
-  std::cout << __PRETTY_FUNCTION__ << std::endl;
+  TRACE
   glClear(GL_COLOR_BUFFER_BIT);
   glPointSize(16);
   glBegin(GL_POINTS);
