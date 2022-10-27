@@ -8,10 +8,9 @@
 
 int main(int argc, char * argv[]) {
   
-  const std::string file_path;
-  const std::string file_name;
+  const std::string file_path = "test_points.txt"; 
   driver driver_;
-  driver_.initialize(argc, argv, file_path, file_name);
+  driver_.initialize(argc, argv, file_path);
   driver_.set_show_options(0);
   driver_.show();
   driver_.destruct();

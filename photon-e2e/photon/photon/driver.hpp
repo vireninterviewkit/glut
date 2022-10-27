@@ -14,11 +14,12 @@ class driver {
 public:
   driver();
   ~driver();
-  void initialize(int argc, char * argv[], const std::string &file_path, const std::string &file_name);
+  void initialize(int argc, char * argv[], const std::string &file_path);
   void destruct();
   void set_show_options(unsigned int flags);
   void show();
 private:
+  int read_data(const std::string& file_path);
 };
 
 #endif /* driver_hpp */
